@@ -2,7 +2,6 @@
   <div class="nav">
       <a v-bind:class="{ activo : styles1 }" class="btn-t" @click="cambiarDato1">FORMACION ACADEMICA</a>
       <a v-bind:class="{ activo : styles2 }" class="btn-m" @click="cambiarDato2">CERTIFICADOS Y CURSOS</a>
-      <!-- <a class="btn-b" @click="cambiarDato3">Dato 3</a> -->
   </div>
 </template>
 
@@ -42,6 +41,7 @@ export default {
 
 .nav {
   margin: auto;
+  
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -64,7 +64,7 @@ export default {
   background-color: #fff;
   padding: 10px;
   /* border-radius: 5px; */
-  border: 1px solid var(-color-1);
+  /* border: 1px solid var(-color-1); */
   transition: 500ms;
 }
 

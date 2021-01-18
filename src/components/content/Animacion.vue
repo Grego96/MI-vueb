@@ -105,12 +105,11 @@ export default {
     },
   },
    created () {
-      
+      this.$bus.$on('cambiar-dato1', () => {
+        this.cambiarContenido1()
+      }),
       this.$bus.$on('cambiar-dato2', () => {
         this.cambiarContenido2()
-      }),
-      this.$bus.$on('cambiar-dato3', () => {
-        this.cambiarContenido3()
       })
     },
 };

@@ -34,7 +34,7 @@
                 <a href>
                   <img src="https://img.icons8.com/cute-clipart/64/000000/instagram-new.png" />
                 </a>-->
-                <a href>
+                <a href="https://www.linkedin.com/in/gregory-hunkeler-0a248b198/" target="_blank">
                   <img src="https://img.icons8.com/cute-clipart/64/000000/linkedin.png" />
                 </a>
               </div>
@@ -57,7 +57,7 @@
 
 <script>
 import yoImg from "../../../public/img/1.png"
-import curriculum from "../../../src/assets/pdf/curriculum.pdf"
+import curriculum from "../../../src/assets/pdf/Curriculum.pdf"
 
 export default {
  data () {
