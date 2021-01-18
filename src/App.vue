@@ -1,32 +1,133 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-1 d-none d-md-block p-0 pr-xl-4 mb-3">
+          <Nav />
+        </div>
+        <div class="col-sm-12 col-xl-11">
+          <Content />
+        </div>
+      </div>
     </div>
-    <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import Nav from "./components/Nav.vue"
+import Content from "./components/Content.vue"
+
+export default {
+  components: {
+    Nav,
+    Content
+  }
+}
+</script>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap");
+
+:root {
+  --color-1: rgba(47, 204, 128, 1);
+  --color-2: rgb(43, 196, 175);
+  --color-3:rgba(47, 204, 128, 1);
+  --color-4:rgb(10, 168, 92);
 }
 
-#nav {
-  padding: 30px;
+/* router-link-exact-active {
+  color: #42b983;
+} */
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+#app {
+  padding: 48px 70px;
+  /* height: 100vh; */
+  font-family: "Roboto", sans-serif;
+  filter: brightness(90%);
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+@media (max-width: 1000px) {
+  #app {
+    padding: 10px;
+    padding-top: 30px;
   }
+}
+
+body {
+  /* height: 100vh; */
+
+  /* background: rgba(169, 3, 41, 1);
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(169, 3, 41, 1) 0%,
+    rgba(143, 2, 34, 1) 44%,
+    rgba(109, 0, 25, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right bottom,
+    color-stop(0%, rgba(169, 3, 41, 1)),
+    color-stop(44%, rgba(143, 2, 34, 1)),
+    color-stop(100%, rgba(109, 0, 25, 1))
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgba(169, 3, 41, 1) 0%,
+    rgba(143, 2, 34, 1) 44%,
+    rgba(109, 0, 25, 1) 100%
+  );
+  background: -o-linear-gradient(
+    -45deg,
+    rgba(169, 3, 41, 1) 0%,
+    rgba(143, 2, 34, 1) 44%,
+    rgba(109, 0, 25, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    -45deg,
+    rgba(169, 3, 41, 1) 0%,
+    rgba(143, 2, 34, 1) 44%,
+    rgba(109, 0, 25, 1) 100%
+  );
+  background: linear-gradient(
+    135deg,
+    rgba(169, 3, 41, 1) 0%,
+    rgba(143, 2, 34, 1) 44%,
+    rgba(109, 0, 25, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 ); */
+  background: rgba(47, 204, 128, 1);
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(47, 204, 128, 1) 0%,
+    rgba(74, 183, 255, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right bottom,
+    color-stop(0%, rgba(47, 204, 128, 1)),
+    color-stop(100%, rgba(74, 183, 255, 1))
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgba(47, 204, 128, 1) 0%,
+    rgba(74, 183, 255, 1) 100%
+  );
+  background: -o-linear-gradient(
+    -45deg,
+    rgba(47, 204, 128, 1) 0%,
+    rgba(74, 183, 255, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    -45deg,
+    rgba(47, 204, 128, 1) 0%,
+    rgba(74, 183, 255, 1) 100%
+  );
+  background: linear-gradient(
+    135deg,
+    rgba(47, 204, 128, 1) 0%,
+    rgba(74, 183, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2fcc80', endColorstr='#4ab7ff', GradientType=1 );
 }
 </style>
