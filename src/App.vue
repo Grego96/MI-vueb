@@ -12,7 +12,7 @@
     </div>
       <p class="btn-disable-analitycs">
   Click <a href="#" @click.prevent="disableTracking">here</a>,
-  to disable the tracking through Google Analytics.
+  to disable the tracking through Google Analytics. <a href="#" @click.prevent="enableTracking">Enable</a>
 </p>
   </div>
 </template>
@@ -30,6 +30,9 @@ export default {
     disableTracking: function() {
       this.$ga.disable();
       alert('Tracking disabled');
+    },
+    enableTracking: function() {
+      this.$ga.enable();
     }
   }
 }
