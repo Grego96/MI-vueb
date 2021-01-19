@@ -10,6 +10,10 @@
         </div>
       </div>
     </div>
+      <p class="btn-disable-analitycs">
+  Click <a href="#" @click.prevent="disableTracking">here</a>,
+  to disable the tracking through Google Analytics.
+</p>
   </div>
 </template>
 
@@ -21,6 +25,12 @@ export default {
   components: {
     Nav,
     Content
+  },
+  methods: {
+    disableTracking: function() {
+      this.$ga.disable();
+      alert('Tracking disabled');
+    }
   }
 }
 </script>
@@ -42,6 +52,7 @@ export default {
 
 #app {
   padding: 48px 70px;
+  height: 100vh;
   /* height: 100vh; */
   font-family: "Roboto", sans-serif;
   filter: brightness(90%);
@@ -129,5 +140,10 @@ body {
     rgba(74, 183, 255, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2fcc80', endColorstr='#4ab7ff', GradientType=1 );
+}
+
+.btn-disable-analitycs {
+  margin-top: 15px;
+  float: right;
 }
 </style>
