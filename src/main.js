@@ -8,7 +8,7 @@ import VueAnalytics from 'vue-analytics';
 
 // Configuration VueAnalytics
 Vue.use(VueAnalytics, {
-  id: 'UA-259271860'
+  id: 'G-G0Q2QTM5S7'
 });
 
 Vue.config.productionTip = false
