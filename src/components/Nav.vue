@@ -24,9 +24,6 @@ export default {
        this.styles1 = false;
       this.styles2 = true;
     },
-    // cambiarDato3() {
-    //   this.$bus.$emit("cambiar-dato3")
-    // }
   }
 }
 </script>
@@ -46,10 +43,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-between; */
-    /* margin: 0px 25px; */
-  /* background: var(--color-1); */
-  /* height: 60%; */
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   overflow: hidden;
@@ -60,11 +53,8 @@ export default {
   width: 100%;
   color: rgba(104, 104, 104, 0.938);
   font-weight: 900;
-  /* background-color: var(--color-2); */
   background-color: #fff;
   padding: 10px;
-  /* border-radius: 5px; */
-  /* border: 1px solid var(-color-1); */
   transition: 500ms;
 }
 

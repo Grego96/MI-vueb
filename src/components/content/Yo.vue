@@ -28,12 +28,6 @@
           <div class="row">
             <div class="col-md-12 p-0 mt-4 mb-4">
               <div class="redes">
-                <!-- <a href>
-                  <img src="https://img.icons8.com/cute-clipart/64/000000/facebook.png" />
-                </a>
-                <a href>
-                  <img src="https://img.icons8.com/cute-clipart/64/000000/instagram-new.png" />
-                </a>-->
                 <a href="https://www.linkedin.com/in/gregory-hunkeler-0a248b198/" target="_blank">
                   <img src="https://img.icons8.com/cute-clipart/64/000000/linkedin.png" />
                 </a>
@@ -94,10 +88,7 @@ export default {
 }
 
 .caja .img img {
-  /* position: absolute; */
   width: 70%;
-  /* height: 100%; */
-  /* top: -90px; */
   border-radius: 6px;
 }
 

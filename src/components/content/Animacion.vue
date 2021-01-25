@@ -124,8 +124,6 @@ export default {
   color: white;
   clip-path: circle(100px at 100% 0%);
   transition: 500ms;
-  /* border: 3px solid rgba(201,3,49,1); */
-  /* box-shadow: 2px 2xp 2px rgba(143, 2, 34, 1); */
   background: rgba(47, 204, 128, 1);
   background: -moz-linear-gradient(
     -45deg,
