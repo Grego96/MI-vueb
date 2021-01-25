@@ -37,6 +37,9 @@
                 <a href="https://www.linkedin.com/in/gregory-hunkeler-0a248b198/" target="_blank">
                   <img src="https://img.icons8.com/cute-clipart/64/000000/linkedin.png" />
                 </a>
+                <a href="https://github.com/Grego96" target="_blank">
+                  <img src="https://img.icons8.com/cute-clipart/64/000000/github.png"/>
+                </a>
               </div>
             </div>
           </div>
