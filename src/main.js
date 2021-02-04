@@ -6,6 +6,8 @@ import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
 import VueAnalytics from 'vue-analytics';
 
+require('vue2-animate/dist/vue2-animate.min.css')
+
 // Configuration VueAnalytics
 Vue.use(VueAnalytics, {
   id: 'UA-187628358-2'

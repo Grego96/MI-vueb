@@ -2,7 +2,7 @@
   <div id="app">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xl-1 d-none d-md-block p-0 pr-xl-4 mb-3">
+        <div class="col-xl-1 d-none d-xl-block p-0 pr-xl-4 mb-3">
           <Nav />
         </div>
         <div class="col-sm-12 col-xl-11">

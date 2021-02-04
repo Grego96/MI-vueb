@@ -1,6 +1,8 @@
 <template>
   <div class="caja">
     <div class="img">
+      <div class="bur burbuja1"></div>
+      <div class="bur burbuja2"></div>
       <img :src="yoImg" />
     </div>
     <div class="algo">
@@ -32,7 +34,7 @@
                   <img src="https://img.icons8.com/cute-clipart/64/000000/linkedin.png" />
                 </a>
                 <a href="https://github.com/Grego96" target="_blank">
-                  <img src="https://img.icons8.com/cute-clipart/64/000000/github.png"/>
+                  <img src="https://img.icons8.com/cute-clipart/64/000000/github.png" />
                 </a>
               </div>
             </div>
@@ -53,17 +55,17 @@
 </template>
 
 <script>
-import yoImg from "../../../public/img/1.png"
-import curriculum from "../../../src/assets/pdf/Curriculum.pdf"
+import yoImg from "../../../public/img/1.png";
+import curriculum from "../../../src/assets/pdf/Curriculum.pdf";
 
 export default {
- data () {
+  data() {
     return {
       yoImg: yoImg,
       curriculum: curriculum
+    };
   }
-},
-}
+};
 </script>
 
 <style>
@@ -74,24 +76,20 @@ export default {
   background: var(--color-1);
   height: 100%;
   border-radius: 6px;
-  overflow: hidden;
+  
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
-
 .caja .img {
   height: 100%;
-  overflow: hidden;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .caja .img img {
   width: 70%;
   border-radius: 6px;
 }
-
 @media (max-width: 1000px) {
   .caja .img img {
     width: 100%;
@@ -101,7 +99,6 @@ export default {
     height: auto;
   }
 }
-
 .caja .yo {
   display: flex;
   flex-direction: column;
@@ -112,21 +109,18 @@ export default {
   height: 300px;
   text-align: center;
 }
-
 @media (max-width: 1000px) {
   .caja .yo {
     height: auto;
     font-size: 18px;
   }
 }
-
 .footer {
   color: #fff;
   display: flex;
   justify-content: space-between;
   background: var(--color-1);
 }
-
 .footer .d {
   padding: 20px;
   display: flex;
@@ -135,34 +129,27 @@ export default {
   width: 50%;
   transition: 500ms;
 }
-
 .footer .d:hover {
   background-color: var(--color-4);
 }
-
 .footer .d a {
   color: white;
   font-weight: 700;
   font-size: 18px;
 }
-
 .footer .d a:hover {
   text-decoration: none;
   color: white;
 }
-
 .footer .d:hover{
   background-color: var(--color-4);
 }
-
 .b-tr {
   border-left: 1px solid black;
 }
-
 .algo {
   position: relative;
 }
-
 .out {
   height: 100px;
   width: 100%;
@@ -171,14 +158,87 @@ export default {
   top: -99px;
   clip-path: polygon(0 0, 0% 0, 100% 100%, 50% 100%, 0 80vh);
 }
-
 .yo h1 {
   font-size: 50px;
 }
-
 .yo p {
   font-size: 20px;
   color: var(--color-1);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+
+@keyframes flotar {
+  0% {
+    top: -5%;
+  }
+  50% {
+    top: 0%;
+  }
+  100% {
+    top: -5%;
+  }
+}
+
+@keyframes flotar1 {
+   0% {
+    top: -7%;
+  }
+  50% {
+    top: 0%;
+  }
+  100% {
+    top: -7%;
+  }
+}
+
+@keyframes flotar2 {
+   0% {
+    top: 45%;
+  }
+  50% {
+    top: 70%;
+  }
+  100% {
+    top: 45%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .caja .img img {
+    clip-path: circle(46% at 50% 50%);
+    animation-name: flotar;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    border: 30px solid black;
+    position: absolute;
+    width: 80%;
+    border-radius: 6px;
+  }
+  .bur {
+    position: absolute;
+    clip-path: circle(40% at 50% 50%);
+    background-color: rgb(234, 248, 233);
+    box-shadow: 50px 50px 1px rgb(234, 248, 233);
+  }
+
+  .burbuja1 {
+    height: 40%;
+    width: 40%;
+    top: -20px;
+    left: -20px;
+    animation-name: flotar1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+
+  .burbuja2 {
+    height: 45%;
+    width: 45%;
+    right: -5%;
+    animation-name: flotar2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
 }
 </style>
