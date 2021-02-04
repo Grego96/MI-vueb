@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import NavSm from "../content/NavSm"
+import NavSm from "../content/NavSm";
 
 export default {
   components: {
@@ -21,21 +21,7 @@ export default {
   data() {
     return {
       isActive: true,
-      contenido: `<h3>FORMACION ACADEMICA </h3>
-                <ul>
-                    <li>Escuela N°148 - SAN RAMÓN.</li>
-                    <li>LICEO "DOCTOR JUAN BELZA" — SAN RAMÓN. </li>
-                    <li>LICEO "JOSÉ ALONSO Y TRELLES" TALA </li>
-                    <li>FACULTAD DE ARQUITECTURA, DISEÑO Y URBANISMO | UDELAR (no finalizado) </li>
-                </ul>`,
-      contenido1: `<h3>FORMACION ACADEMICA </h3>
-                  <ul>
-                    <li>Escuela N°148 - SAN RAMÓN.</li>
-                    <li>LICEO "DOCTOR JUAN BELZA" — SAN RAMÓN. </li>
-                    <li>LICEO "JOSÉ ALONSO Y TRELLES" TALA </li>
-                    <li>FACULTAD DE ARQUITECTURA, DISEÑO Y URBANISMO | UDELAR (no finalizado) </li>
-                  </ul>`,
-      contenido2: `<h3>CERTIFICADOS Y CURSOS </h3>
+      contenido: `<h3>CERTIFICADOS Y CURSOS </h3>
                   <ul>
                     <li>Certificado Inglés – <span>Alianza:</span>
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="si"></span>(2008) -Teen Basic A.
@@ -55,6 +41,33 @@ export default {
                     <li>(2020) - Front-End <span>Hack Academy</span>.</li>
                     <li>(2020) - Vue JS (2 y 3) - Crea Aplicaciones Web Modernas con Vue por Grover Vásquez <span>(Online-Udemy)</span>.</li>
                   </ul>`,
+      contenido1: `<h3>CERTIFICADOS Y CURSOS </h3>
+                  <ul>
+                    <li>Certificado Inglés – <span>Alianza:</span>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="si"></span>(2008) -Teen Basic A.
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="si"></span>(2009) -Teen Basic B.
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="si"></span>(2010) -Teen
+                        Upper-Basic.
+                    </li>
+
+                    <li>(2019) - Diseño BIM - Modelos de Información Constructiva (Revit Architecture
+                        2019) -<span>Bios</span> </li>
+                    <li>(2019) - Photoshop Proceso Digital de Imágenes -<span>Ibec</span>.</li>
+                    <li>(2019) - Master en CSS: Responsive, Flexbox. Grid y Bootstrap 4 por Víctor Robles
+                        <span>(Online-Udemy)</span>.</li>
+                    <li>(2019) - HTML desde cero -<span>EdTeam</span>.</li>
+                    <li>(2019) - CSS Desde Cero -<span>EdTeam</span>.</li>
+                    <li>(2019) - Curso Gratis de Programación Básica -<span>Platzi</span>.</li>
+                    <li>(2020) - Front-End <span>Hack Academy</span>.</li>
+                    <li>(2020) - Vue JS (2 y 3) - Crea Aplicaciones Web Modernas con Vue por Grover Vásquez <span>(Online-Udemy)</span>.</li>
+                  </ul>`,
+      contenido2: `<h3>FORMACION ACADEMICA </h3>
+                <ul>
+                    <li>Escuela N°148 - SAN RAMÓN.</li>
+                    <li>LICEO "DOCTOR JUAN BELZA" — SAN RAMÓN. </li>
+                    <li>LICEO "JOSÉ ALONSO Y TRELLES" TALA </li>
+                    <li>FACULTAD DE ARQUITECTURA, DISEÑO Y URBANISMO | UDELAR (no finalizado) </li>
+                </ul>`
     };
   },
   methods: {
@@ -62,7 +75,7 @@ export default {
       this.isActive = false;
 
       setTimeout(
-        function () {
+        function() {
           this.isActive = true;
           //----------------------------------------------
 
@@ -77,7 +90,7 @@ export default {
       this.isActive = false;
 
       setTimeout(
-        function () {
+        function() {
           this.isActive = true;
           //----------------------------------------------
 
@@ -92,7 +105,7 @@ export default {
       this.isActive = false;
 
       setTimeout(
-        function () {
+        function() {
           this.isActive = true;
           //----------------------------------------------
 
@@ -102,16 +115,16 @@ export default {
         }.bind(this),
         500
       );
-    },
+    }
   },
-   created () {
-      this.$bus.$on('cambiar-dato1', () => {
-        this.cambiarContenido1()
-      }),
-      this.$bus.$on('cambiar-dato2', () => {
-        this.cambiarContenido2()
-      })
-    },
+  created() {
+    this.$bus.$on("cambiar-dato1", () => {
+      this.cambiarContenido1();
+    }),
+      this.$bus.$on("cambiar-dato2", () => {
+        this.cambiarContenido2();
+      });
+  }
 };
 </script>
 

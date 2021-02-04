@@ -1,14 +1,18 @@
 <template>
   <div class="caja">
-    <div class="img">
-      <div class="bur burbuja1"></div>
-      <div class="bur burbuja2"></div>
-      <img :src="yoImg" />
-    </div>
+    <transition name="bounce">
+      <div v-if="show" class="img">
+        <div class="bur burbuja1"></div>
+        <div class="bur burbuja2"></div>
+        <img :src="yoImg" />
+      </div>
+    </transition>
     <div class="algo">
       <div class="out"></div>
       <div class="yo">
-        <h1>Gregory Hunkeler</h1>
+        <transition name="bounceLeft">
+          <h1 v-if="show">Gregory Hunkeler</h1>
+        </transition>
         <p>Desarrollador web</p>
         <div class="herramientas">
           <div class="row">
@@ -40,7 +44,6 @@
             </div>
           </div>
         </div>
-        <div class="redes"></div>
       </div>
       <div class="footer">
         <div class="d">
@@ -62,8 +65,12 @@ export default {
   data() {
     return {
       yoImg: yoImg,
-      curriculum: curriculum
+      curriculum: curriculum,
+      show: false
     };
+  },
+  mounted() {
+    this.show = true;
   }
 };
 </script>
@@ -76,7 +83,7 @@ export default {
   background: var(--color-1);
   height: 100%;
   border-radius: 6px;
-  
+
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 .caja .img {
@@ -141,7 +148,7 @@ export default {
   text-decoration: none;
   color: white;
 }
-.footer .d:hover{
+.footer .d:hover {
   background-color: var(--color-4);
 }
 .b-tr {
@@ -167,7 +174,6 @@ export default {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-
 @keyframes flotar {
   0% {
     top: -5%;
@@ -181,7 +187,7 @@ export default {
 }
 
 @keyframes flotar1 {
-   0% {
+  0% {
     top: -7%;
   }
   50% {
@@ -193,7 +199,7 @@ export default {
 }
 
 @keyframes flotar2 {
-   0% {
+  0% {
     top: 45%;
   }
   50% {

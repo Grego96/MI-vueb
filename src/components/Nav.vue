@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
-      <a v-bind:class="{ activo : styles1 }" class="btn-t" @click="cambiarDato1">FORMACION ACADEMICA</a>
-      <a v-bind:class="{ activo : styles2 }" class="btn-m" @click="cambiarDato2">CERTIFICADOS Y CURSOS</a>
+      <a v-bind:class="{ activo : styles1 }" class="btn-t" @click="cambiarDato1">CERTIFICADOS Y CURSOS</a>
+      <a v-bind:class="{ activo : styles2 }" class="btn-m" @click="cambiarDato2">FORMACION ACADEMICA</a>
   </div>
 </template>
 

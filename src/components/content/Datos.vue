@@ -7,7 +7,8 @@
           <div class="titulo pl-3 pr-3">
             <h2 class="pt-4">Sobre Mi</h2>
           </div>
-          <div class="datos1 p-3">
+          <transition name="bounceUp">
+          <div v-if="show" class="datos1 p-3">
             <div class="row">
               <div class="col-xl-6">
                 <div class="sobremi">
@@ -41,6 +42,7 @@
               </div>
             </div>
           </div>
+          </transition>
           <!--  -->
         </div>
       </div>
@@ -65,7 +67,15 @@ import Animacion from "./Animacion.vue"
 export default {
     components: {
         Animacion,
-    }
+    },
+    data() {
+      return{
+        show: false
+      }
+    },
+    mounted() {
+    this.show = true;
+  }
 }
 </script>
 
