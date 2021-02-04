@@ -83,7 +83,6 @@ export default {
   background: var(--color-1);
   height: 100%;
   border-radius: 6px;
-
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 .caja .img {
@@ -96,6 +95,7 @@ export default {
 .caja .img img {
   width: 70%;
   border-radius: 6px;
+  clip-path: circle(55% at 50% 50%);
 }
 @media (max-width: 1000px) {
   .caja .img img {
@@ -216,9 +216,8 @@ export default {
     animation-name: flotar;
     animation-duration: 10s;
     animation-iteration-count: infinite;
-    border: 30px solid black;
     position: absolute;
-    width: 80%;
+    width: 70%;
     border-radius: 6px;
   }
   .bur {
