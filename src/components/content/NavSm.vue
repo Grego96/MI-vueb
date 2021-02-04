@@ -30,12 +30,17 @@ export default {
 
 <style>
 .navSm {
+  padding: 10px;
   margin: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 10px var(--color-4);
+  /* border: 2px solid var(--color-4); */
 }
 
 .navSm a {

@@ -5,43 +5,44 @@
         <div class="contenido">
           <!-- -->
           <div class="titulo pl-3 pr-3">
-            <h2 class="pt-4">Sobre Mi</h2>
+            <h2 class="pt-4 pl-3">Sobre Mi</h2>
           </div>
           <transition name="bounceUp">
-          <div v-if="show" class="datos1 p-3">
-            <div class="row">
-              <div class="col-xl-6">
-                <div class="sobremi">
-                  <p>Hola, soy Grego, un desarrollador web nuevo y autodidacta que se intereso en la programacion luego de algunos años estudiando arquitectura
-                    lo que me llevo a dejar la carrera para poder estudiar ingenieria informatica, llevo mas de un añó estudiando intensamente desarrollo web mediante cursos online y 
-                    presenciales y constantemente amplio mis conocimientos sobre el tema para algun dia poder ser un desarrollador web experimentado e ingeniero informatico.
-                  </p>
+            <div v-if="show" class="datos1 p-3">
+              <div class="row">
+                <div class="col-xl-6">
+                  <div class="sobremi pl-3">
+                    <p>
+                      Hola, soy Grego, un desarrollador web nuevo y autodidacta que se intereso en la programación luego de algunos años estudiando arquitectura
+                      lo que me llevo a dejar la carrera para poder estudiar ingeniería Informatica, llevo más de un año estudiando intensamente desarrollo web mediante cursos online y
+                      presenciales y constantemente amplio mis conocimientos sobre el tema para algún día poder ser un desarrollador web experimentado e ingeniero informático.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-xl-6">
-                <div class="el elemento-1">
-                  <h5>Edad :</h5>
-                  <p>24</p>
-                </div>
-                <div class="el elemento-1">
-                  <h5>Residencia :</h5>
-                  <p>Uruguay</p>
-                </div>
-                <div class="el elemento-1">
-                  <h5>Dirección :</h5>
-                  <p>Bv Jose Batlle y Ordoñez 1302</p>
-                </div>
-                <div class="el elemento-1">
-                  <h5>Cel :</h5>
-                  <p>099907201</p>
-                </div>
-                <div class="el elemento-1">
-                  <h5>Mail :</h5>
-                  <p>gregoryhunkeler@gmail.com</p>
+                <div class="col-xl-6 pr-3">
+                  <div class="el elemento-1">
+                    <h5>Edad :</h5>
+                    <p>24</p>
+                  </div>
+                  <div class="el elemento-1">
+                    <h5>Residencia :</h5>
+                    <p>Uruguay</p>
+                  </div>
+                  <div class="el elemento-1">
+                    <h5>Dirección :</h5>
+                    <p>Bv Jose Batlle y Ordoñez 1302</p>
+                  </div>
+                  <div class="el elemento-1">
+                    <h5>Cel :</h5>
+                    <p>099907201</p>
+                  </div>
+                  <div class="el elemento-1">
+                    <h5>Mail :</h5>
+                    <p>gregoryhunkeler@gmail.com</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
           </transition>
           <!--  -->
         </div>
@@ -62,25 +63,24 @@
 </template>
 
 <script>
-import Animacion from "./Animacion.vue"
+import Animacion from "./Animacion.vue";
 
 export default {
-    components: {
-        Animacion,
-    },
-    data() {
-      return{
-        show: false
-      }
-    },
-    mounted() {
+  components: {
+    Animacion
+  },
+  data() {
+    return {
+      show: false
+    };
+  },
+  mounted() {
     this.show = true;
   }
-}
+};
 </script>
 
 <style>
-
 h2 {
   margin: 0;
 }
@@ -113,6 +113,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   padding: 0px;
+  text-align: right;
 }
 
 .el h5 {
@@ -128,7 +129,6 @@ h2 {
 .el p {
   color: var(--color-1);
   font-size: 18px;
-  margin-right: 30px;
 }
 
 .h100 {
