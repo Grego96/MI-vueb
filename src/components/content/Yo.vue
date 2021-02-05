@@ -4,14 +4,14 @@
       <div v-if="show" class="img">
         <div class="bur burbuja1"></div>
         <div class="bur burbuja2"></div>
-        <img :src="yoImg" />
+        <img class="imgyo" :src="yoImg" />
       </div>
     </transition>
     <div class="algo">
       <div class="out"></div>
       <div class="yo">
         <transition name="bounceLeft">
-          <h1 v-if="show">Gregory Hunkeler</h1>
+          <h1 class="nombre" v-if="show">Gregory Hunkeler</h1>
         </transition>
         <p>Desarrollador web</p>
         <div class="herramientas">
@@ -26,9 +26,20 @@
               />
             </div>
             <div class="col-md-6 p-0 d-flex justify-content-center">
-              <img src="https://img.icons8.com/color/48/000000/vue-js.png" />
+              <img
+                class="vue"
+                id="vue"
+                src="https://img.icons8.com/color/48/000000/vue-js.png"
+                @mouseover="hover = true"
+                @mouseleave="hover = false"
+              />
               <img src="https://img.icons8.com/color/48/000000/sass.png" />
               <img src="https://img.icons8.com/color/48/000000/ubuntu--v1.png" />
+              <img
+                class="matecito"
+                src="https://img.icons8.com/bubbles/100/000000/mate.png"
+                :class="{ matecitos: hover }"
+              />
             </div>
           </div>
           <div class="row">
@@ -66,7 +77,8 @@ export default {
     return {
       yoImg: yoImg,
       curriculum: curriculum,
-      show: false
+      show: false,
+      hover: false
     };
   },
   mounted() {
@@ -223,8 +235,8 @@ export default {
   .bur {
     position: absolute;
     clip-path: circle(40% at 50% 50%);
-    background-color: rgb(234, 248, 233);
-    box-shadow: 50px 50px 1px rgb(234, 248, 233);
+    background-color: rgba(234, 248, 233, 0.541);
+    box-shadow: 50px 50px 1px rgba(234, 248, 233, 0.541);
   }
 
   .burbuja1 {
@@ -244,6 +256,39 @@ export default {
     animation-name: flotar2;
     animation-duration: 10s;
     animation-iteration-count: infinite;
+  }
+  .matecito {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    animation-name: Mate;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: 0.5s;
+    z-index: -10;
+  }
+
+  .matecitos {
+    left: -430px;
+    cursor: pointer;
+  }
+}
+
+.matecito {
+  position: absolute;
+  z-index: -10;
+}
+
+@keyframes Mate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 </style>

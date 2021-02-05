@@ -51,6 +51,7 @@ export default {
   padding: 10px;
   border: 1px solid var(-color-1);
   transition: 500ms;
+  text-decoration: underline;
 }
 
 .navSm a:hover {
