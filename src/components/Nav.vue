@@ -1,5 +1,5 @@
 <template>
-  <div class="nav" v-tilt="{speed: 1000, perspective: 500, reverse: true, scale: 1.1}">
+  <div class="nav">
       <a v-bind:class="{ activo : styles1 }" class="btn-t" @click="cambiarDato1">CERTIFICADOS Y CURSOS</a>
       <a v-bind:class="{ activo : styles2 }" class="btn-m" @click="cambiarDato2">FORMACION ACADEMICA</a>
   </div>
@@ -30,16 +30,9 @@ export default {
 
 <style>
 
-@media (max-width: 1000px) {
- .nav {
-   margin-bottom: 100px;
- }
-}
-
 .nav {
   margin: auto;
-  
-  width: 100%;
+  width: 98%;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,11 +1,10 @@
 <template>
   <div id="app">
-    <div class="bur2 burbuja4"></div>
-
     <div class="container-fluid" >
       <div class="row">
-        <div id="mate" class="col-xl-1 d-none d-xl-block p-0 pr-xl-4 mb-3">
-          <Nav />
+        <div id="mate" class="col-xl-1 d-none d-md-block p-0 pr-xl-2 mb-3">
+          <Nav v-if="tilt()" v-tilt="{speed: 2000, perspective: 500, reverse: true, scale: 1}"/>
+          <Nav v-else/>
         </div>
         <div class="col-sm-12 col-xl-11">
           <Content />
@@ -40,6 +39,14 @@ export default {
     },
     enableTracking: function() {
       this.$ga.enable();
+    },
+    tilt() {
+      let x = window.matchMedia("(max-width: 1000px)")
+      if (x.matches) {
+        return false
+      } else {
+        return true
+      }
     }
   }
 };
@@ -58,7 +65,7 @@ export default {
 }
 
 #app {
-  padding: 48px 70px;
+  padding: 48px 40px;
   height: 100vh;
   font-family: "Roboto", sans-serif;
   filter: brightness(90%);
@@ -126,9 +133,9 @@ body {
 }
 
 @media (min-width: 1200px) {
-  #app {
+  /* #app {
     overflow: hidden;
-  }
+  } */
 
   .bur2 {
     position: absolute;
