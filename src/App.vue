@@ -2,7 +2,7 @@
   <div id="app">
     <div class="bur2 burbuja4"></div>
 
-    <div class="container-fluid">
+    <div class="container-fluid" >
       <div class="row">
         <div id="mate" class="col-xl-1 d-none d-xl-block p-0 pr-xl-4 mb-3">
           <Nav />
@@ -43,6 +43,7 @@ export default {
     }
   }
 };
+
 </script>
 
 <style>

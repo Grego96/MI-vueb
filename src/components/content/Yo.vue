@@ -1,7 +1,7 @@
 <template>
-  <div class="caja">
-    <transition name="bounce">
-      <div v-if="show" class="img">
+  <div class="caja" >
+    <transition name="bounce" >
+      <div v-if="show" class="img" >
         <div class="bur burbuja1"></div>
         <div class="bur burbuja2"></div>
         <img class="imgyo" :src="yoImg" />
@@ -11,7 +11,7 @@
       <div class="out"></div>
       <div class="yo">
         <transition name="bounceLeft">
-          <h1 class="nombre" v-if="show">Gregory Hunkeler</h1>
+          <h1 class="nombre" v-if="show" v-tilt="{speed: 5000, perspective: 5000, reverse: true, scale: 1.1}">Gregory Hunkeler</h1>
         </transition>
         <p>Desarrollador web</p>
         <div class="herramientas">
@@ -78,7 +78,7 @@ export default {
       yoImg: yoImg,
       curriculum: curriculum,
       show: false,
-      hover: false
+      hover: false,
     };
   },
   mounted() {

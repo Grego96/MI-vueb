@@ -5,6 +5,10 @@ import store from './store'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
 import VueAnalytics from 'vue-analytics';
+import VueTilt from 'vue-tilt.js'
+
+Vue.use(VueTilt)
+
 
 require('vue2-animate/dist/vue2-animate.min.css')
 
